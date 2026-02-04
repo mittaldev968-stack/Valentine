@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>She Said Yes!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h1>YAYYY 😍❤️</h1>
+    <p>You just made my Valentine perfect 💕</p>
+    <p>See you for our special date 🥰</p>
+  </div>
+
+</body>
+</html>
+
