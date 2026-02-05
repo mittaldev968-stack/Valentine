@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Be My Valentine 💖</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Pacifico&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,8 +19,8 @@
   <!-- DECOR ELEMENTS -->
   <img src="heart.png" class="heart fade-in">
   <img src="date.png" class="date fade-in">
-  <img src="plane.png" class="plane fade-in">
   <img src="teddy.png" class="teddy fade-in">
+  <img src="plane.png" class="plane fade-in">
 
   <!-- MAIN CONTENT -->
   <div class="container fade-in">
@@ -27,10 +30,19 @@
     <p class="question">Will you be my Valentine?</p>
 
     <div class="buttons">
-      <button class="yes" onclick="location.href='yes.html'">YES OF COURSE</button>
-      <button class="no" onclick="location.href='no.html'">NO THANK YOU</button>
+      <button class="yes" onclick="goYes()">YES OF COURSE</button>
+      <button class="no" onclick="goNo()">NO THANK YOU</button>
     </div>
   </div>
+
+  <script>
+    function goYes() {
+      window.location.href = "yes.html";
+    }
+    function goNo() {
+      window.location.href = "no.html";
+    }
+  </script>
 
 </body>
 </html>
