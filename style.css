@@ -4,86 +4,75 @@
   box-sizing: border-box;
 }
 
-/* 🌸 BACKGROUND WITH SHADES */
+/* 🌸 BACKGROUND */
 body {
   height: 100vh;
   background:
-    radial-gradient(circle at top left, #ffe6ef 0%, transparent 40%),
-    radial-gradient(circle at bottom right, #ffc1d6 0%, transparent 45%),
-    linear-gradient(180deg, #ffd9e7, #ffb6ce);
-  overflow: hidden;
-  position: relative;
+    radial-gradient(circle at 15% 15%, #ffe6ef 0%, transparent 35%),
+    radial-gradient(circle at 85% 85%, #ffc1d6 0%, transparent 40%),
+    linear-gradient(180deg, #ffd6e6, #ffb3cf);
   font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
-/* ✨ ENTRY ANIMATION */
-.fade-in {
-  opacity: 0;
-  transform: translateY(25px) scale(0.98);
-  animation: fadeUp 1.2s ease forwards;
+/* =========================
+   DECORATION LAYER
+========================= */
+.decor img {
+  position: absolute;
+  pointer-events: none;
+  animation: fadeIn 1.2s ease forwards;
 }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* ❤️ BIG HEART — TOP LEFT */
+/* ❤️ HEART — TOP LEFT (BIG) */
 .heart {
-  position: absolute;
-  top: -70px;
-  left: -70px;
-  width: 440px;
+  top: -80px;
+  left: -80px;
+  width: 460px;
   transform: rotate(-12deg);
-  z-index: 1;
 }
 
-/* 📅 DATE — TOP RIGHT (TILTED LEFT) */
+/* 📅 DATE — TOP RIGHT */
 .date {
-  position: absolute;
   top: 30px;
   right: 40px;
-  width: 230px;
-  transform: rotate(-150deg);
-  z-index: 3;
+  width: 130px;
+  transform: rotate(-14deg);
+}
+
+/* ✈️ PLANE — BOTTOM RIGHT (BIG) */
+.plane {
+  bottom: 30px;
+  right: 40px;
+  width: 220px;
+  transform: rotate(15deg);
 }
 
 /* 🧸 TEDDY — BOTTOM LEFT */
 .teddy {
-  position: absolute;
-  bottom: 40px;
-  right: 40px;
-  width: 430px;
-  transform: rotate(-4deg);
-  z-index: 2;
-}
-
-/* ✈️ PLANE — BOTTOM RIGHT (BIG + TILTED) */
-.plane {
-  position: absolute;
   bottom: 35px;
   left: 40px;
-  width: 210px;
-  transform: rotate(15deg);
-  z-index: 2;
+  width: 240px;
+  transform: rotate(-4deg);
 }
 
-/* 🌸 CENTER CONTENT (VISUALLY CENTERED) */
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -68%);
+/* =========================
+   MAIN CONTENT (TRUE CENTER)
+========================= */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  z-index: 5;
+  animation: fadeIn 1.2s ease forwards;
 }
 
 /* 👩‍❤️‍👨 COUPLE */
 .couple {
   width: 260px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 /* TEXT */
@@ -92,7 +81,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   color: #e94b77;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .question {
@@ -107,11 +96,10 @@ body {
 .buttons {
   display: flex;
   gap: 45px;
-  justify-content: center;
 }
 
 button {
-  padding: 16px 32px;
+  padding: 16px 34px;
   border-radius: 40px;
   border: none;
   font-size: 15px;
@@ -126,7 +114,7 @@ button:hover {
 .yes {
   background: #ff2f68;
   color: white;
-  box-shadow: 0 10px 25px rgba(255, 47, 104, 0.45);
+  box-shadow: 0 12px 28px rgba(255, 47, 104, 0.45);
 }
 
 .no {
@@ -134,3 +122,14 @@ button:hover {
   color: #5a2a2a;
 }
 
+/* ✨ ENTRY */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
