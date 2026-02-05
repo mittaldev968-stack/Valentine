@@ -4,103 +4,95 @@
   box-sizing: border-box;
 }
 
-/* 🌸 BACKGROUND */
 body {
   height: 100vh;
   background:
-    radial-gradient(circle at 20% 20%, #ffe3ee, transparent 35%),
-    radial-gradient(circle at 80% 80%, #ffc1d6, transparent 40%),
-    linear-gradient(180deg, #ffd1e3, #ffb0cd);
+    radial-gradient(circle at 20% 20%, #ffe6ef, transparent 40%),
+    radial-gradient(circle at 80% 80%, #ffc2d8, transparent 45%),
+    linear-gradient(180deg, #ffd1e3, #ffb3cd);
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
 }
 
-/* =========================
-   DECORATIVE LAYER
-========================= */
-.decor img {
+/* ================= DECOR ================= */
+.decor-layer img {
   position: absolute;
+  z-index: 1;
   pointer-events: none;
   animation: fadeIn 1.2s ease forwards;
 }
 
-/* BIG HEART — TOP LEFT */
-.decor-heart {
-  top: -100px;
-  left: -100px;
-  width: 480px;
-  transform: rotate(-12deg);
+/* HEART – TOP LEFT */
+.heart {
+  top: -60px;
+  left: -60px;
+  width: 300px;
+  transform: rotate(-10deg);
 }
 
-/* DATE — TOP RIGHT */
-.decor-date {
+/* DATE – TOP RIGHT */
+.date {
   top: 25px;
-  right: 40px;
-  width: 150px;
+  right: 35px;
+  width: 140px;
   transform: rotate(-15deg);
 }
 
-/* PLANE — BOTTOM RIGHT (BIG) */
-.decor-plane {
-  bottom: 30px;
-  right: 40px;
-  width: 240px;
+/* PLANE – BOTTOM RIGHT */
+.plane {
+  bottom: 35px;
+  right: 35px;
+  width: 200px;
   transform: rotate(18deg);
 }
 
-/* TEDDY — BOTTOM LEFT */
-.decor-teddy {
+/* TEDDY – BOTTOM LEFT */
+.teddy {
   bottom: 35px;
-  left: 40px;
-  width: 260px;
-  transform: rotate(-4deg);
+  left: 35px;
+  width: 220px;
 }
 
-/* =========================
-   CENTERED CONTENT (LOCKED)
-========================= */
-.center-wrapper {
+/* ================= CONTENT ================= */
+.content-layer {
   position: fixed;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 5;
 }
 
 .content {
   text-align: center;
-  animation: fadeIn 1.2s ease forwards;
+  animation: fadeInUp 1.2s ease forwards;
 }
 
-/* COUPLE IMAGE */
 .couple {
-  width: 280px;
-  margin-bottom: 30px;
+  width: 260px;
+  margin-bottom: 25px;
 }
 
-/* TEXT */
 .hey {
   font-family: 'Pacifico', cursive;
   font-size: 34px;
-  font-weight: bold;
-  color: #e94b77;
-  margin-bottom: 10px;
+  color: #e84c77;
+  margin-bottom: 8px;
 }
 
 .question {
   font-size: 40px;
   font-weight: 700;
   color: #ff2f68;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
   white-space: nowrap;
 }
 
-/* BUTTONS */
+/* ================= BUTTONS ================= */
 .buttons {
   display: flex;
-  justify-content: center;
   gap: 50px;
+  justify-content: center;
 }
 
 button {
@@ -109,26 +101,31 @@ button {
   border: none;
   font-size: 15px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 button:hover {
-  transform: scale(1.12);
+  transform: scale(1.1);
 }
 
 .yes {
   background: #ff2f68;
   color: white;
-  box-shadow: 0 12px 28px rgba(255, 47, 104, 0.45);
+  box-shadow: 0 10px 26px rgba(255,47,104,0.45);
 }
 
 .no {
-  background: #f5c1cf;
+  background: #f3b7c6;
   color: #5a2a2a;
 }
 
-/* ENTRY ANIMATION */
+/* ================= ANIMATIONS ================= */
 @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(18px);
@@ -138,3 +135,4 @@ button:hover {
     transform: translateY(0);
   }
 }
+
