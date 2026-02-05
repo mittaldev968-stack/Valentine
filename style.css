@@ -29,7 +29,7 @@ body {
   top: -80px;
   left: -80px;
   width: 360px;
-  transform: rotate(-12deg);
+  transform: rotate(-8deg);
 }
 
 /* 📅 DATE — TOP RIGHT */
@@ -37,7 +37,7 @@ body {
   top: 30px;
   right: 40px;
   width: 130px;
-  transform: rotate(-14deg);
+  transform: rotate(4deg);
 }
 
 /* ✈️ PLANE — BOTTOM RIGHT (BIG) */
