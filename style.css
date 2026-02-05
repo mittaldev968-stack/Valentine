@@ -1,39 +1,86 @@
 body {
-  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  margin: 0;
+  padding: 0;
   height: 100vh;
+  background: linear-gradient(135deg, #ffd6e8, #ffeaf4);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
+  background: #ffd1dc;
+  width: 350px;
+  padding: 30px 20px;
+  border-radius: 25px;
   text-align: center;
-  width: 300px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  position: relative;
 }
 
-h1 {
+.hearts {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  font-size: 20px;
+}
+
+h2 {
+  margin: 10px 0 5px;
   color: #ff4d6d;
 }
 
+h1 {
+  font-size: 22px;
+  color: #ff2f68;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 button {
-  border: none;
-  padding: 12px 20px;
-  margin: 10px;
-  border-radius: 25px;
+  padding: 14px;
   font-size: 16px;
+  border-radius: 30px;
+  border: none;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .yes {
-  background: #ff4d6d;
+  background: #ff5c8a;
   color: white;
 }
 
+.yes:hover {
+  background: #ff2f68;
+}
+
 .no {
-  background: #ddd;
+  background: #f4b6c2;
+  color: #5a2a2a;
+}
+
+.no:hover {
+  background: #f1a3b3;
+}
+
+.footer {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ff2f68;
+  font-weight: bold;
 }
