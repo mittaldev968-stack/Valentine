@@ -8,15 +8,15 @@
 body {
   height: 100vh;
   background:
-    radial-gradient(circle at 15% 15%, #ffe6ef 0%, transparent 35%),
-    radial-gradient(circle at 85% 85%, #ffc1d6 0%, transparent 40%),
-    linear-gradient(180deg, #ffd6e6, #ffb3cf);
-  font-family: 'Poppins', sans-serif;
+    radial-gradient(circle at 20% 20%, #ffe3ee, transparent 35%),
+    radial-gradient(circle at 80% 80%, #ffc1d6, transparent 40%),
+    linear-gradient(180deg, #ffd1e3, #ffb0cd);
   overflow: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* =========================
-   DECORATION LAYER
+   DECORATIVE LAYER
 ========================= */
 .decor img {
   position: absolute;
@@ -24,68 +24,72 @@ body {
   animation: fadeIn 1.2s ease forwards;
 }
 
-/* ❤️ HEART — TOP LEFT (BIG) */
-.heart {
-  top: -80px;
-  left: -80px;
-  width: 360px;
-  transform: rotate(-8deg);
+/* BIG HEART — TOP LEFT */
+.decor-heart {
+  top: -100px;
+  left: -100px;
+  width: 480px;
+  transform: rotate(-12deg);
 }
 
-/* 📅 DATE — TOP RIGHT */
-.date {
-  top: 30px;
+/* DATE — TOP RIGHT */
+.decor-date {
+  top: 25px;
   right: 40px;
-  width: 130px;
-  transform: rotate(4deg);
+  width: 150px;
+  transform: rotate(-15deg);
 }
 
-/* ✈️ PLANE — BOTTOM RIGHT (BIG) */
-.plane {
+/* PLANE — BOTTOM RIGHT (BIG) */
+.decor-plane {
   bottom: 30px;
   right: 40px;
-  width: 220px;
-  transform: rotate(15deg);
+  width: 240px;
+  transform: rotate(18deg);
 }
 
-/* 🧸 TEDDY — BOTTOM LEFT */
-.teddy {
+/* TEDDY — BOTTOM LEFT */
+.decor-teddy {
   bottom: 35px;
   left: 40px;
-  width: 240px;
+  width: 260px;
   transform: rotate(-4deg);
 }
 
 /* =========================
-   MAIN CONTENT (TRUE CENTER)
+   CENTERED CONTENT (LOCKED)
 ========================= */
-.hero {
-  height: 100vh;
+.center-wrapper {
+  position: fixed;
+  inset: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 10;
+}
+
+.content {
   text-align: center;
   animation: fadeIn 1.2s ease forwards;
 }
 
-/* 👩‍❤️‍👨 COUPLE */
+/* COUPLE IMAGE */
 .couple {
-  width: 260px;
-  margin-bottom: 28px;
+  width: 280px;
+  margin-bottom: 30px;
 }
 
 /* TEXT */
 .hey {
   font-family: 'Pacifico', cursive;
-  font-size: 32px;
+  font-size: 34px;
   font-weight: bold;
   color: #e94b77;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .question {
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 700;
   color: #ff2f68;
   margin-bottom: 45px;
@@ -95,11 +99,12 @@ body {
 /* BUTTONS */
 .buttons {
   display: flex;
-  gap: 45px;
+  justify-content: center;
+  gap: 50px;
 }
 
 button {
-  padding: 16px 34px;
+  padding: 16px 36px;
   border-radius: 40px;
   border: none;
   font-size: 15px;
@@ -122,11 +127,11 @@ button:hover {
   color: #5a2a2a;
 }
 
-/* ✨ ENTRY */
+/* ENTRY ANIMATION */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;
