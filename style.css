@@ -1,65 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Be My Valentine 💖</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+}
 
-  <!-- 1️⃣ HEART RAIN BACKGROUND -->
-  <img src="hearts-bg.png" class="hearts-bg" alt="">
+body {
+  height: 100vh;
+  background: linear-gradient(180deg, #ff7aa2, #ff9fbd);
+  position: relative;
+  overflow: hidden;
+}
 
-  <!-- 2️⃣ DATE STICKER -->
-  <img src="date.png" class="date-sticker" alt="14 Feb">
+/* 1️⃣ HEART RAIN */
+.hearts-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
 
-  <!-- 3️⃣ MAIN CONTENT -->
-  <div class="content">
+/* 2️⃣ DATE STICKER */
+.date-sticker {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 90px;
+}
 
-    <img src="couple.png" class="couple-img" alt="Couple">
+/* 3️⃣ CENTER CONTENT */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ff2f68;
+  width: 90%;
+  max-width: 400px;
+}
 
-    <h2>Hey there,</h2>
-    <h1>Will you be my <br> Valentine? 💕</h1>
+.couple-img {
+  width: 140px;
+  margin-bottom: 15px;
+}
 
-    <div class="buttons">
-      <button class="yes" onclick="goYes()">YES OF COURSE 💖</button>
-      <button class="no" onclick="goNo()">NO THANK YOU 😌</button>
-    </div>
+.content h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
 
-  </div>
+.content h1 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
 
-  <!-- 4️⃣ PAPER PLANE -->
-  <img src="plane.png" class="plane-img" alt="Fly to you">
+/* BUTTONS */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 
-  <!-- 🎵 BACKGROUND MUSIC -->
-  <audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mpeg">
-  </audio>
+button {
+  border: none;
+  padding: 14px;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-  <button class="music-btn" onclick="playMusic()">🎶</button>
+.yes {
+  background: #ff2f68;
+  color: white;
+}
 
-  <script>
-    function goYes() {
-      window.location.href = "yes.html";
-    }
+.no {
+  background: #f3c1cc;
+  color: #5a2a2a;
+}
 
-    function goNo() {
-      window.location.href = "no.html";
-    }
+/* 4️⃣ PLANE */
+.plane-img {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 140px;
+}
 
-    function playMusic() {
-      const music = document.getElementById("bgMusic");
-      music.play();
-      document.querySelector(".music-btn").style.display = "none";
-    }
-
-    // auto start on first interaction
-    document.addEventListener("click", () => {
-      const music = document.getElementById("bgMusic");
-      if (music.paused) music.play();
-    }, { once: true });
-  </script>
-
-</body>
-</html>
+/* 🎵 MUSIC BUTTON */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff2f68;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
 
