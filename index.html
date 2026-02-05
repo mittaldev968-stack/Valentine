@@ -7,23 +7,16 @@
 </head>
 <body>
 
-  <!-- Background hearts image (optional) -->
-  <img src="hearts.png" class="bg-hearts" alt="" />
+  <!-- 1️⃣ HEART RAIN BACKGROUND -->
+  <img src="hearts-bg.png" class="hearts-bg" alt="">
 
-  <!-- Floating hearts emojis -->
-  <div class="hearts-top">💖 💕 💘 💗 💓</div>
+  <!-- 2️⃣ DATE STICKER -->
+  <img src="date.png" class="date-sticker" alt="14 Feb">
 
-  <!-- Date sticker -->
-  <div class="date-sticker">
-    <span>14</span>
-    <small>FEB</small>
-  </div>
-
-  <!-- Main content -->
+  <!-- 3️⃣ MAIN CONTENT -->
   <div class="content">
 
-    <!-- Couple image -->
-    <img src="couple.png" class="couple-img" alt="Us">
+    <img src="couple.png" class="couple-img" alt="Couple">
 
     <h2>Hey there,</h2>
     <h1>Will you be my <br> Valentine? 💕</h1>
@@ -35,16 +28,14 @@
 
   </div>
 
-  <!-- Paper plane image / emoji -->
-  <img src="plane.png" class="plane-img" alt="">
-  <div class="plane-emoji">✈️</div>
+  <!-- 4️⃣ PAPER PLANE -->
+  <img src="plane.png" class="plane-img" alt="Fly to you">
 
-  <!-- Music -->
+  <!-- 🎵 BACKGROUND MUSIC -->
   <audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- Music button -->
   <button class="music-btn" onclick="playMusic()">🎶</button>
 
   <script>
@@ -62,7 +53,7 @@
       document.querySelector(".music-btn").style.display = "none";
     }
 
-    // Optional: start music on first click anywhere
+    // auto start on first interaction
     document.addEventListener("click", () => {
       const music = document.getElementById("bgMusic");
       if (music.paused) music.play();
@@ -71,3 +62,4 @@
 
 </body>
 </html>
+
