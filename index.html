@@ -7,34 +7,66 @@
 </head>
 <body>
 
-  <div class="container">
-    <div class="card">
+  <!-- Background hearts image (optional) -->
+  <img src="hearts.png" class="bg-hearts" alt="" />
 
-      <div class="hearts">❤️ ❤️ ❤️</div>
+  <!-- Floating hearts emojis -->
+  <div class="hearts-top">💖 💕 💘 💗 💓</div>
 
-      <h2>Hey there,</h2>
-      <h1>Will you be my Valentine? 💕</h1>
-
-      <div class="buttons">
-        <button class="yes" onclick="goYes()">YES OF COURSE 💖</button>
-        <button class="no" onclick="goNo()">NO THANKS 😌</button>
-      </div>
-
-      <div class="footer">
-        <span>✈️</span>
-        <p>14 FEB</p>
-      </div>
-
-    </div>
+  <!-- Date sticker -->
+  <div class="date-sticker">
+    <span>14</span>
+    <small>FEB</small>
   </div>
+
+  <!-- Main content -->
+  <div class="content">
+
+    <!-- Couple image -->
+    <img src="couple.png" class="couple-img" alt="Us">
+
+    <h2>Hey there,</h2>
+    <h1>Will you be my <br> Valentine? 💕</h1>
+
+    <div class="buttons">
+      <button class="yes" onclick="goYes()">YES OF COURSE 💖</button>
+      <button class="no" onclick="goNo()">NO THANK YOU 😌</button>
+    </div>
+
+  </div>
+
+  <!-- Paper plane image / emoji -->
+  <img src="plane.png" class="plane-img" alt="">
+  <div class="plane-emoji">✈️</div>
+
+  <!-- Music -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Music button -->
+  <button class="music-btn" onclick="playMusic()">🎶</button>
 
   <script>
     function goYes() {
       window.location.href = "yes.html";
     }
+
     function goNo() {
       window.location.href = "no.html";
     }
+
+    function playMusic() {
+      const music = document.getElementById("bgMusic");
+      music.play();
+      document.querySelector(".music-btn").style.display = "none";
+    }
+
+    // Optional: start music on first click anywhere
+    document.addEventListener("click", () => {
+      const music = document.getElementById("bgMusic");
+      if (music.paused) music.play();
+    }, { once: true });
   </script>
 
 </body>
