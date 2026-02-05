@@ -1,48 +1,87 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+}
+
+body {
   height: 100vh;
-  background: linear-gradient(135deg, #ffd6e8, #ffeaf4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Arial', sans-serif;
-}
-
-.container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  background: #ffd1dc;
-  width: 350px;
-  padding: 30px 20px;
-  border-radius: 25px;
-  text-align: center;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  background: linear-gradient(180deg, #ff7aa2, #ff9fbd);
   position: relative;
+  overflow: hidden;
 }
 
-.hearts {
+/* Optional hearts background image */
+.bg-hearts {
   position: absolute;
-  top: -15px;
-  left: 15px;
-  font-size: 20px;
+  top: 0;
+  width: 100%;
+  opacity: 0.3;
 }
 
-h2 {
-  margin: 10px 0 5px;
-  color: #ff4d6d;
-}
-
-h1 {
+/* Floating hearts */
+.hearts-top {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 22px;
-  color: #ff2f68;
-  margin-bottom: 25px;
+  letter-spacing: 10px;
 }
 
+/* Date sticker */
+.date-sticker {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.date-sticker span {
+  font-size: 20px;
+  color: #ff2f68;
+}
+
+.date-sticker small {
+  display: block;
+  font-size: 12px;
+}
+
+/* Main text */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Couple image */
+.couple-img {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+/* Text */
+.content h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.content h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
 .buttons {
   display: flex;
   flex-direction: column;
@@ -50,37 +89,56 @@ h1 {
 }
 
 button {
-  padding: 14px;
-  font-size: 16px;
-  border-radius: 30px;
   border: none;
+  padding: 14px 26px;
+  border-radius: 40px;
+  font-size: 16px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 .yes {
-  background: #ff5c8a;
+  background: #ff2f68;
   color: white;
 }
 
 .yes:hover {
-  background: #ff2f68;
+  transform: scale(1.05);
 }
 
 .no {
-  background: #f4b6c2;
+  background: #f1d0d8;
   color: #5a2a2a;
 }
 
-.no:hover {
-  background: #f1a3b3;
+/* Plane */
+.plane-img {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  width: 100px;
 }
 
-.footer {
-  margin-top: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #ff2f68;
-  font-weight: bold;
+.plane-emoji {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 30px;
 }
+
+/* Music button */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff2f68;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
