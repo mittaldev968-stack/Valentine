@@ -7,60 +7,31 @@
 </head>
 <body>
 
-  <!-- HEART RAIN BACKGROUND -->
-  <img src="hearts-bg.jpg" class="hearts-bg" alt="">
-
-  <!-- DATE STICKER -->
-  <img src="date.jpg" class="date-sticker" alt="14 Feb">
-
-  <!-- MAIN CONTENT -->
-  <div class="content">
-
-    <img src="couple.jpg" class="couple-img" alt="Couple">
-
-    <h2>Hey there,</h2>
-    <h1>Will you be my <br> Valentine? 💕</h1>
-
-    <div class="buttons">
-      <button class="yes" onclick="goYes()">YES OF COURSE 💖</button>
-      <button class="no" onclick="goNo()">NO THANK YOU 😌</button>
-    </div>
-
-  </div>
-
-  <!-- PAPER PLANE -->
-  <img src="plane.jpg" class="plane-img" alt="Fly to you">
-
-  <!-- BACKGROUND MUSIC -->
-  <audio id="bgMusic" loop>
-    <source src="music.mp3.mp3" type="audio/mpeg">
+  <!-- MUSIC -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- MUSIC BUTTON -->
-  <button class="music-btn" onclick="playMusic()">🎶</button>
+  <!-- DECORATIONS -->
+  <img src="heart.png" class="heart">
+  <img src="date.png" class="date">
+  <img src="plane.png" class="plane">
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <img src="couple.png" class="couple">
+
+    <p class="hey">Hey there,</p>
+    <p class="question">Will you be my Valentine?</p>
+
+    <div class="buttons">
+      <button class="yes" onclick="goYes()">YES OF COURSE</button>
+      <button class="no" onclick="goNo()">NO THANK YOU</button>
+    </div>
+  </div>
 
   <script>
     function goYes() {
-      window.location.href = "yes.html";
-    }
+      window.location.href = "y
 
-    function goNo() {
-      window.location.href = "no.html";
-    }
-
-    function playMusic() {
-      const music = document.getElementById("bgMusic");
-      music.play();
-      document.querySelector(".music-btn").style.display = "none";
-    }
-
-    // Auto-play music on first interaction
-    document.addEventListener("click", () => {
-      const music = document.getElementById("bgMusic");
-      if (music.paused) music.play();
-    }, { once: true });
-  </script>
-
-</body>
-</html>
 
