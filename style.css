@@ -12,7 +12,7 @@ body {
   overflow: hidden;
 }
 
-/* 1️⃣ HEART RAIN */
+/* HEART RAIN IMAGE */
 .hearts-bg {
   position: absolute;
   top: 0;
@@ -21,7 +21,7 @@ body {
   pointer-events: none;
 }
 
-/* 2️⃣ DATE STICKER */
+/* DATE STICKER */
 .date-sticker {
   position: absolute;
   top: 20px;
@@ -29,7 +29,7 @@ body {
   width: 90px;
 }
 
-/* 3️⃣ CENTER CONTENT */
+/* CENTER CONTENT */
 .content {
   position: absolute;
   top: 50%;
@@ -42,7 +42,7 @@ body {
 }
 
 .couple-img {
-  width: 140px;
+  width: 150px;
   margin-bottom: 15px;
 }
 
@@ -53,7 +53,7 @@ body {
 
 .content h1 {
   font-size: 32px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 /* BUTTONS */
@@ -81,7 +81,7 @@ button {
   color: #5a2a2a;
 }
 
-/* 4️⃣ PLANE */
+/* PAPER PLANE */
 .plane-img {
   position: absolute;
   bottom: 20px;
@@ -89,7 +89,7 @@ button {
   width: 140px;
 }
 
-/* 🎵 MUSIC BUTTON */
+/* MUSIC BUTTON */
 .music-btn {
   position: fixed;
   bottom: 20px;
@@ -102,5 +102,6 @@ button {
   border: none;
   font-size: 20px;
   cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
