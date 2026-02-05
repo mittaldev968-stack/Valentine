@@ -2,35 +2,58 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Comic Sans MS', 'Arial', sans-serif;
 }
 
 body {
   height: 100vh;
-  background: #ffd6e8;
-  position: relative;
+  background: radial-gradient(circle at top, #ffe1ee, #ffb3cf, #ff9fbd);
   overflow: hidden;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* TRANSITION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* DECOR ELEMENTS */
 .heart {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 60px;
+  top: -40px;
+  left: -40px;
+  width: 300px;
 }
 
 .date {
   position: absolute;
   top: 20px;
-  right: 20px;
-  width: 80px;
+  right: 30px;
+  width: 90px;
+  transform: rotate(-10deg);
 }
 
 .plane {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 30px;
+  left: 30px;
+  width: 160px;
+  transform: rotate(-12deg);
+}
+
+.teddy {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
   width: 120px;
 }
 
@@ -44,71 +67,56 @@ body {
 }
 
 .couple {
-  width: 160px;
+  width: 190px;
   margin-bottom: 20px;
 }
 
+/* TEXT */
 .hey {
-  font-size: 22px;
+  font-family: 'Pacifico', cursive;
+  font-size: 26px;
+  font-weight: bold;
   color: #e75480;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .question {
-  font-size: 28px;
+  font-size: 30px;
+  font-weight: 700;
   color: #ff2f68;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   white-space: nowrap;
 }
 
 /* BUTTONS */
 .buttons {
   display: flex;
-  gap: 15px;
+  gap: 30px;
   justify-content: center;
 }
 
 button {
-  padding: 14px 22px;
+  padding: 15px 26px;
+  border-radius: 40px;
   border: none;
-  border-radius: 30px;
   font-size: 14px;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.08);
 }
 
 .yes {
   background: #ff2f68;
   color: white;
+  box-shadow: 0 8px 20px rgba(255, 47, 104, 0.4);
 }
 
 .no {
   background: #f3b6c6;
   color: #5a2a2a;
-}
-
-/* CENTER TEXT (YES / NO PAGES) */
-.center-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #ff2f68;
-}
-
-.center-text h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.center-text p {
-  font-size: 18px;
-}
-
-.center-text button {
-  margin-top: 20px;
-  background: #ff2f68;
-  color: white;
 }
 
 
