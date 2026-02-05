@@ -1,138 +1,138 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Comic Sans MS','Poppins',cursive;
 }
 
-body {
-  height: 100vh;
-  background:
-    radial-gradient(circle at 20% 20%, #ffe6ef, transparent 40%),
-    radial-gradient(circle at 80% 80%, #ffc2d8, transparent 45%),
-    linear-gradient(180deg, #ffd1e3, #ffb3cd);
-  overflow: hidden;
-  font-family: 'Poppins', sans-serif;
+body{
+    background: linear-gradient(135deg,#ffd1dc,#ffe6f0);
+    height:100vh;
+    overflow:hidden;
 }
 
-/* ================= DECOR ================= */
-.decor-layer img {
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  animation: fadeIn 1.2s ease forwards;
+/* Hide music control */
+audio{
+    display:none;
 }
 
-/* HEART – TOP LEFT */
-.heart {
-  top: -60px;
-  left: -60px;
-  width: 300px;
-  transform: rotate(-10deg);
+/* Page handling */
+.page{
+    display:none;
+    width:100%;
+    height:100vh;
+    position:relative;
+    text-align:center;
 }
 
-/* DATE – TOP RIGHT */
-.date {
-  top: 25px;
-  right: 35px;
-  width: 140px;
-  transform: rotate(-15deg);
+.active{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
-/* PLANE – BOTTOM RIGHT */
-.plane {
-  bottom: 35px;
-  right: 35px;
-  width: 200px;
-  transform: rotate(18deg);
+/* Decorations */
+.top-left{
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:80px;
 }
 
-/* TEDDY – BOTTOM LEFT */
-.teddy {
-  bottom: 35px;
-  left: 35px;
-  width: 220px;
+.top-right{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:#ff6f91;
+    color:white;
+    padding:10px 16px;
+    border-radius:14px;
+    font-weight:bold;
 }
 
-/* ================= CONTENT ================= */
-.content-layer {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 5;
+.bottom-left{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    width:120px;
 }
 
-.content {
-  text-align: center;
-  animation: fadeInUp 1.2s ease forwards;
+.bottom-right{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+    width:120px;
 }
 
-.couple {
-  width: 260px;
-  margin-bottom: 25px;
+/* Main content */
+.couple{
+    width:160px;
+    margin-bottom:15px;
 }
 
-.hey {
-  font-family: 'Pacifico', cursive;
-  font-size: 34px;
-  color: #e84c77;
-  margin-bottom: 8px;
+h1{
+    color:#ff4f7b;
+    margin-bottom:8px;
 }
 
-.question {
-  font-size: 40px;
-  font-weight: 700;
-  color: #ff2f68;
-  margin-bottom: 40px;
-  white-space: nowrap;
+h2{
+    color:#ff87ab;
 }
 
-/* ================= BUTTONS ================= */
-.buttons {
-  display: flex;
-  gap: 50px;
-  justify-content: center;
+/* Buttons */
+.buttons{
+    display:flex;
+    gap:22px;
+    margin-top:25px;
 }
 
-button {
-  padding: 16px 36px;
-  border-radius: 40px;
-  border: none;
-  font-size: 15px;
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+.btn{
+    padding:15px 38px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-button:hover {
-  transform: scale(1.1);
+.yes{
+    background:#ff6f91;
+    color:white;
 }
 
-.yes {
-  background: #ff2f68;
-  color: white;
-  box-shadow: 0 10px 26px rgba(255,47,104,0.45);
+.no{
+    background:#ffc2d1;
 }
 
-.no {
-  background: #f3b7c6;
-  color: #5a2a2a;
+.btn:hover{
+    transform:scale(1.1);
 }
 
-/* ================= ANIMATIONS ================= */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Page 2 */
+.sad-heart{
+    width:120px;
+    margin-bottom:20px;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Page 3 */
+.gifts{
+    display:flex;
+    gap:20px;
+    margin-top:25px;
+}
+
+.gift{
+    background:#ffb3c6;
+    padding:40px;
+    width:120px;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gift:hover{
+    background:#ff6f91;
+    color:white;
 }
 
