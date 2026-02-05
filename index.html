@@ -4,37 +4,42 @@
   <meta charset="UTF-8">
   <title>Be My Valentine 💖</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- MUSIC -->
-  <audio autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
-  </audio>
+<!-- MUSIC -->
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 
-  <!-- DECOR LAYER -->
-  <div class="decor">
-    <img src="heart.png" class="heart">
-    <img src="date.png" class="date">
-    <img src="plane.png" class="plane">
-    <img src="teddy.png" class="teddy">
-  </div>
+<!-- DECORATIVE ELEMENTS (DO NOT TOUCH LAYOUT) -->
+<div class="decor">
+  <img src="heart.png" class="decor-heart">
+  <img src="date.png" class="decor-date">
+  <img src="plane.png" class="decor-plane">
+  <img src="teddy.png" class="decor-teddy">
+</div>
 
-  <!-- MAIN CENTER LAYER -->
-  <main class="hero">
+<!-- MAIN CONTENT (ALWAYS CENTERED) -->
+<div class="center-wrapper">
+  <div class="content">
+
     <img src="couple.png" class="couple">
 
-    <p class="hey">Hey there,</p>
-    <p class="question">Will you be my Valentine?</p>
+    <div class="text">
+      <div class="hey">Hey there,</div>
+      <div class="question">Will you be my Valentine?</div>
+    </div>
 
     <div class="buttons">
       <button class="yes" onclick="location.href='yes.html'">YES OF COURSE</button>
       <button class="no" onclick="location.href='no.html'">NO THANK YOU</button>
     </div>
-  </main>
+
+  </div>
+</div>
 
 </body>
 </html>
