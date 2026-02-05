@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Be My Valentine 💗</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Valentine ❤️</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <audio autoplay loop>
-  <source src="music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<!-- DECORATIVE ELEMENTS -->
-<div class="decor-layer">
-  <img src="heart.png" class="heart">
-  <img src="date.png" class="date">
-  <img src="plane.png" class="plane">
-  <img src="teddy.png" class="teddy">
-</div>
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
 
-<!-- MAIN CONTENT -->
-<div class="content-layer">
-  <div class="content">
+    <img src="hearts.png" class="top-left">
+    <div class="top-right">14 FEB</div>
+
+    <img src="teddy.png" class="bottom-left">
+    <img src="plane.png" class="bottom-right">
 
     <img src="couple.png" class="couple">
 
-    <h2 class="hey">Hey there,</h2>
-    <h1 class="question">Will you be my Valentine?</h1>
+    <h1>Hey there,</h1>
+    <h2>Will you be my Valentine?</h2>
 
     <div class="buttons">
-      <button class="yes" onclick="location.href='yes.html'">YES OF COURSE</button>
-      <button class="no" onclick="location.href='no.html'">NO THANK YOU</button>
+        <button class="btn yes" onclick="yesClicked()">YES OF COURSE</button>
+        <button class="btn no" onclick="noClicked()">NO THANK YOU</button>
     </div>
-
-  </div>
 </div>
 
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <img src="teddy.png" class="sad-heart">
+    <h1>Try again please :(</h1>
+    <button class="btn yes" onclick="goBack()">Try Again</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <h1>Yay, you said yes! ❤️</h1>
+    <p>I made all these for you hehe</p>
+
+    <div class="gifts">
+        <div class="gift">Gift 1 🎁</div>
+        <div class="gift">Gift 2 💌</div>
+        <div class="gift">Gift 3 💖</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
