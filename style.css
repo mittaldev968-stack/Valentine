@@ -1,144 +1,65 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Comic Sans MS', 'Arial', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-  height: 100vh;
-  background: linear-gradient(180deg, #ff7aa2, #ff9fbd);
-  position: relative;
-  overflow: hidden;
-}
+  <!-- 1️⃣ HEART RAIN BACKGROUND -->
+  <img src="hearts-bg.png" class="hearts-bg" alt="">
 
-/* Optional hearts background image */
-.bg-hearts {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  opacity: 0.3;
-}
+  <!-- 2️⃣ DATE STICKER -->
+  <img src="date.png" class="date-sticker" alt="14 Feb">
 
-/* Floating hearts */
-.hearts-top {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 22px;
-  letter-spacing: 10px;
-}
+  <!-- 3️⃣ MAIN CONTENT -->
+  <div class="content">
 
-/* Date sticker */
-.date-sticker {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  background: white;
-  padding: 10px 14px;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: bold;
-}
+    <img src="couple.png" class="couple-img" alt="Couple">
 
-.date-sticker span {
-  font-size: 20px;
-  color: #ff2f68;
-}
+    <h2>Hey there,</h2>
+    <h1>Will you be my <br> Valentine? 💕</h1>
 
-.date-sticker small {
-  display: block;
-  font-size: 12px;
-}
+    <div class="buttons">
+      <button class="yes" onclick="goYes()">YES OF COURSE 💖</button>
+      <button class="no" onclick="goNo()">NO THANK YOU 😌</button>
+    </div>
 
-/* Main text */
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  width: 90%;
-  max-width: 400px;
-}
+  </div>
 
-/* Couple image */
-.couple-img {
-  width: 140px;
-  margin-bottom: 20px;
-}
+  <!-- 4️⃣ PAPER PLANE -->
+  <img src="plane.png" class="plane-img" alt="Fly to you">
 
-/* Text */
-.content h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
+  <!-- 🎵 BACKGROUND MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
 
-.content h1 {
-  font-size: 32px;
-  margin-bottom: 30px;
-}
+  <button class="music-btn" onclick="playMusic()">🎶</button>
 
-/* Buttons */
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+  <script>
+    function goYes() {
+      window.location.href = "yes.html";
+    }
 
-button {
-  border: none;
-  padding: 14px 26px;
-  border-radius: 40px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
+    function goNo() {
+      window.location.href = "no.html";
+    }
 
-.yes {
-  background: #ff2f68;
-  color: white;
-}
+    function playMusic() {
+      const music = document.getElementById("bgMusic");
+      music.play();
+      document.querySelector(".music-btn").style.display = "none";
+    }
 
-.yes:hover {
-  transform: scale(1.05);
-}
+    // auto start on first interaction
+    document.addEventListener("click", () => {
+      const music = document.getElementById("bgMusic");
+      if (music.paused) music.play();
+    }, { once: true });
+  </script>
 
-.no {
-  background: #f1d0d8;
-  color: #5a2a2a;
-}
-
-/* Plane */
-.plane-img {
-  position: absolute;
-  bottom: 30px;
-  left: 20px;
-  width: 100px;
-}
-
-.plane-emoji {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 30px;
-}
-
-/* Music button */
-.music-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #ff2f68;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
+</body>
+</html>
 
