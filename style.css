@@ -6,16 +6,19 @@
 
 body {
   height: 100vh;
-  background: radial-gradient(circle at top, #ffe1ee, #ffb3cf, #ff9fbd);
+  background:
+    radial-gradient(circle at top left, #ffe6ef 0%, transparent 40%),
+    radial-gradient(circle at bottom right, #ffc1d6 0%, transparent 45%),
+    linear-gradient(180deg, #ffd9e7, #ffb6ce);
   overflow: hidden;
   position: relative;
   font-family: 'Poppins', sans-serif;
 }
 
-/* TRANSITION */
+/* SMOOTH ENTRY ANIMATION */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(25px);
   animation: fadeUp 1.2s ease forwards;
 }
 
@@ -26,97 +29,106 @@ body {
   }
 }
 
-/* DECOR ELEMENTS */
+/* ❤️ BIG HEART — TOP LEFT */
 .heart {
   position: absolute;
-  top: -40px;
-  left: -40px;
-  width: 300px;
+  top: -60px;
+  left: -60px;
+  width: 420px;            /* MUCH BIGGER */
+  transform: rotate(-8deg);
+  z-index: 1;
 }
 
+/* 📅 DATE — TOP RIGHT */
 .date {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  width: 90px;
-  transform: rotate(-10deg);
-}
-
-.plane {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  width: 160px;
+  top: 30px;
+  right: 40px;
+  width: 120px;            /* INCREASED */
   transform: rotate(-12deg);
+  z-index: 3;
 }
 
+/* 🧸 TEDDY — BOTTOM LEFT */
 .teddy {
   position: absolute;
-  bottom: 25px;
-  right: 25px;
-  width: 120px;
+  bottom: 40px;
+  left: 40px;
+  width: 220px;            /* BIG & CUTE */
+  z-index: 2;
 }
 
-/* MAIN CONTENT */
+/* ✈️ PLANE — BOTTOM RIGHT */
+.plane {
+  position: absolute;
+  bottom: 35px;
+  right: 40px;
+  width: 200px;            /* INCREASED SIZE */
+  transform: rotate(12deg);
+  z-index: 2;
+}
+
+/* 🌸 CENTER CONTENT */
 .container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 5;
 }
 
+/* 👩‍❤️‍👨 COUPLE IMAGE */
 .couple {
-  width: 190px;
-  margin-bottom: 20px;
+  width: 240px;            /* BIGGER */
+  margin-bottom: 25px;
 }
 
 /* TEXT */
 .hey {
   font-family: 'Pacifico', cursive;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: bold;
-  color: #e75480;
-  margin-bottom: 6px;
+  color: #e94b77;
+  margin-bottom: 8px;
 }
 
 .question {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 700;
   color: #ff2f68;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   white-space: nowrap;
 }
 
 /* BUTTONS */
 .buttons {
   display: flex;
-  gap: 30px;
+  gap: 40px;               /* MORE SPACE */
   justify-content: center;
 }
 
 button {
-  padding: 15px 26px;
+  padding: 16px 30px;
   border-radius: 40px;
   border: none;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 .yes {
   background: #ff2f68;
   color: white;
-  box-shadow: 0 8px 20px rgba(255, 47, 104, 0.4);
+  box-shadow: 0 10px 25px rgba(255, 47, 104, 0.45);
 }
 
 .no {
-  background: #f3b6c6;
+  background: #f5c1cf;
   color: #5a2a2a;
 }
-
 
